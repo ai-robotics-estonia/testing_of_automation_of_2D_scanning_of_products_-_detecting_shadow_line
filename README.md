@@ -18,19 +18,32 @@
 ## Objectives of the Demonstration Project
 *Please describe your project objectives in detail.*
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+The aim of the project is to test a cost-effective device concept that automates the preparatory design stage of production. The device would help reduce the amount of manual work and decrease the time required to obtain the shadow outline of packaged products/equipment. Additionally, it would improve work quality by enhancing the accuracy of results.
+
+The 2D scanning/shadow outline detection of a product or component is currently a manual and time-consuming process, and no suitable devices are available on the market to simplify and automate this process.The need for a device that speeds up and simplifies this task extends across various industries, creating opportunities to commercialize the developed device.
 
 ## Activities and Results of the Demonstration Project
 ### Challenge
 *Please describe challenge addressed (i.e, whether and how the initial challenge was changed during the project, for which investment the demonstration project was provided).*
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+The company's production capacity has significantly improved over time, largely due to the adoption of CNC machines. However, there is still considerable potential to enhance internal processes through digitalization, allowing for the service of an even larger customer base. Currently, a major bottleneck in production is the preparation phase, where excessive time is spent on technical documentation and measuring customer products. Automating this process would lead to a significant breakthrough in increasing production throughput and reducing delivery times for customers.
+
+A foam plastic sheet is cut on a CNC milling machine to create a precise cavity that matches the shape of the packaged product. To generate the CNC machining program for this cavity, the product’s projection/shadow outline must be obtained.
+
+At present, no suitable devices are available on the market for this specific purpose. Existing scanning solutions generate large data volumes with excessive unnecessary information, making the process time-consuming and expensive. Photography-based approaches introduce distortions, and some parts of the packaged product may remain hidden. Light projection methods also cause shape distortions.
+
+The accuracy and speed of detecting the shadow outline of packaged products/equipment are crucial for creating precise and cost-effective transport cases. Currently, the 2D scanning/shadow outline detection process is manual and time-consuming, and no suitable devices exist on the market to simplify and automate it.
+
+The goal of the project is to automatically generate a DXF drawing that can be directly used as a CNC machine command. This solution will also eliminate the time-consuming step of preparing technical documentation.
 
 ### Data Sources
-*Please describe which data was used for the technological solution.*  
-- [Source 1],
-- [Source 2],
-- etc... .
+
+- 2D Image Data (Basler Cameras via Pypylon),
+- Edge Detection Algorithms (OpenCV Canny Edge),
+- Lighting and Contrast Optimization Parameters,
+- Ramer-Douglas-Peucker Algorithm,
+- Convex Hull Algorithm,
+- Contour Refinement and Noise Removal
 
 ### AI Technologies
 *Please describe and justify the use of selected AI technologies.*
@@ -41,7 +54,15 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ### Technological Results
 *Please describe the results of testing and validating the technological solution.*
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Testing has shown that the measurement accuracy of a single-camera system is approaching the required limits for objects up to xxxxx mm in height. While further refinements may be needed, initial results indicate that a single-camera setup can provide sufficient precision for contour detection. This suggests that additional optimization could help meet exact industrial requirements without the need for more complex configurations.
+
+The choice of optical components, particularly in terms of lens distortion and focal length optimization, plays a crucial role in system performance. Testing has provided valuable insights into how different lens parameters affect accuracy. By fine-tuning optical properties, it is possible to minimize geometric distortions and enhance the reliability of the extracted contours.
+
+A multi-camera setup, specifically a four-camera system, was evaluated but found to be unjustified compared to a single-camera approach. The mechanical complexity of aligning and synchronizing multiple cameras would require precise movement coordination, making the system overly intricate. Given these challenges, a well-calibrated single-camera setup was determined to be the more efficient and practical solution, offering similar results with significantly reduced complexity.
+
+The brightness of the light box was tested up to a distance of 1290 mm, and results confirmed that illumination levels remain sufficient for accurate contour detection. The uniform lighting minimizes shadow interference and enhances the clarity of object edges, contributing to more precise contour extraction. These findings validate that the lighting conditions are well-suited for high-accuracy imaging within the tested range.
+
+In conclusion, the single-camera approach proves to be both effective and practical, provided that optical parameters are carefully optimized. The multi-camera system does not offer significant advantages, given the challenges in mechanical alignment and synchronization. Additionally, the lighting setup is sufficient for maintaining accuracy at extended distances. These results guide further refinements in optical calibration and software processing, ensuring continuous improvements in system performance.
 
 ### Technical Architecture
 *Please describe the technical architecture (e.g, presented graphically, where the technical solution integration with the existing system can also be seen).*
@@ -49,7 +70,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 - [Component 2], 
 - etc... .
 
-![backend-architecture](https://github.com/ai-robotics-estonia/_project_template_/assets/15941300/6d405b21-3454-4bd3-9de5-d4daad7ac5b7)
+![backend-architecture](flowchart.png)
 
 
 ### User Interface 
@@ -66,10 +87,15 @@ The UI was validated through experimental testing, where users interacted with t
 
 ![UI](UI.png)
 ### Future Potential of the Technical Solution
-*Please describe the potential areas for future use of the technical solution.*
-- [Use case 1],
-- [Use case 2],
-- etc... .
+
+This machine learning and computer vision solution is unique, and the developed device has market potential. In addition to optimizing production processes, the device also creates an opportunity to tap into a new market by selling the system itself.
+
+A similar shadow outline extraction method can be applied in photo editing, object recognition, and product inspection. The use in quality control of complicated parts is also an opportunity, such as identifying defects by comparing contours to reference models.
+
+The most straightforward use is in the same field of safety case production. Industry at its current state uses mainly manual work to produce contourlines of products and parts.
+
+Additional uses can include robotics and automation. In object recognition and grasping the solution can be used to  assists robotic arms in identifying and picking objects in assembly lines. Autonomous robots could detect and avoid obstacles using contour analysis.
+
 
 ### Lessons Learned
 
