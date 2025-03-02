@@ -1,7 +1,7 @@
 # Automation of 2D Product Scanning – Shadow Line Detection and Device Testing]
 
 ## Summary
-| Ages Partner OÜ | [Company](https://website.link) |
+| Company Name | Ages Partner OÜ |
 | :--- | :--- |
 | Development Team Lead Name | Alar Niidas |
 | Development Team Lead E-mail | [alar.niidas@taltech.ee](mailto:alar.niidas@taltech.ee) |
