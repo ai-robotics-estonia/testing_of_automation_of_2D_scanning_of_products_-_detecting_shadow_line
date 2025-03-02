@@ -1,11 +1,11 @@
-# [Demonstration Project title]
+# Automation of 2D Product Scanning – Shadow Line Detection and Device Testing]
 
 ## Summary
-| Company Name | [Company](https://website.link) |
+| Ages Partner OÜ | [Company](https://website.link) |
 | :--- | :--- |
-| Development Team Lead Name | [Dr. John Smith](https://profile.link) |
-| Development Team Lead E-mail | [email@example.com](mailto:email@example.com) |
-| Duration of the Demonstration Project | month/year-month/year |
+| Development Team Lead Name | Alar Niidas |
+| Development Team Lead E-mail | [alar.niidas@taltech.ee](mailto:alar.niidas@taltech.ee) |
+| Duration of the Demonstration Project | 06.2024 - 02.2025 |
 | Final Report | [Example_report.pdf](https://github.com/ai-robotics-estonia/_project_template_/files/13800685/IC-One-Page-Project-Status-Report-10673_PDF.pdf) |
 
 # Description
