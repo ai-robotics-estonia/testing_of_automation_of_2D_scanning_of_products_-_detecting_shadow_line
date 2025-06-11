@@ -1,4 +1,4 @@
-# Automation of 2D Product Scanning – Shadow Line Detection and Device Testing]
+# Automation of 2D Product Scanning – Shadow Line Detection and Device Testing
 
 ## Summary
 | Company Name | Ages Partner OÜ |
